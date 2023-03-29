@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacts</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="go_home">
+            <form action="/go_home">
+                <input type="image" src="/static/home.png" class="go_home" alt="HOME">
+            </form>
+            </div>
+        <div>
+            <form action="" method="post">
+                <input type="text" name="search_name" placeholder="Enter name to search">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="list_contacts_search">
+        {% for contact in contacts_info %}
+        <form class="choose_search"  action="/choose" method="post">
+            <button class="choose_contact_search"  type="submit">
+                <div>{{contact.name}}</div>
+                <div>{{contact.email}}</div>
+                <div>{{contact.phone}}</div>
+            </button>
+            <input type="hidden" name="tid" value="{{contact.tid}}" >    
+        </form>
+        {% endfor %}
+        </div>
+        <div class="result">
+        {% for c in contacts_list %}
+        <form class="search_result"  action="/choose" method="post">
+            <button class="info_result"  type="submit">
+                <div>{{c.name}}</div>
+                <div>{{c.email}}</div>
+                <div>{{c.phone}}</div>
+            </button>
+            <input type="hidden" name="tid" value="{{c.tid}}" >    
+        </form>
+        {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

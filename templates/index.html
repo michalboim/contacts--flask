@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacts</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h3>Contacts App:</h3>
+    <div class="main">
+        <div class="crud_index">
+            <form action="/create">
+                <button class="add">Add Contact</button>
+            </form>
+            <form action="/search">
+                <button class="Search">Search</button>
+            </form>
+            <form action="/sort">
+                <button class="sort">Sort</button>
+            </form>
+        </div>
+        <div class="titel_index">
+            <div>Name</div>
+            <div>Email</div>
+            <div>Phone</div>
+        </div>
+        <div class="list_contacts_index">
+        {% for contact in contacts_info %}
+        <form class="choose_index"  action="/choose" method="post">
+            <button class="choose_contact_index"  type="submit">
+                <div>{{contact.name}}</div>
+                <div>{{contact.email}}</div>
+                <div>{{contact.phone}}</div>
+            </button>
+            <input type="hidden" name="tid" value="{{contact.tid}}" >    
+        </form>
+        {% endfor %}
+    </div>
+    </div>
+</body>
+</html>

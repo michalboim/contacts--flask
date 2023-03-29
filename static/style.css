@@ -1,0 +1,132 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+body{    
+    position: relative;
+    left: 30px ;}
+.main{
+    width: 300px;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 5px;}
+.go_home{
+    display: flex;
+    justify-content:right;
+    position: relative;
+    right: 2.5px;
+    height: 4vh;}
+
+/*index*/
+.crud_index{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;}
+.titel_index{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 20px;
+    padding-right: 5px;
+    background-color: rgb(126, 126, 126);
+    color: white;
+    border-radius: 7px;
+    position: relative;
+    right: 1.5px;}
+.list_contacts_index{
+    border-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 20px;}
+.choose_index :hover{
+    background-color: rgb(209, 195, 195);}
+.choose_contact_index{
+    border-style: none;
+    border-bottom: solid;
+    border-bottom-color: rgb(189, 187, 187);
+    margin-bottom: 5px;
+    background-color: white;
+    display: flex ;
+    width: 300px;
+    justify-content:space-between;
+    position: relative;
+    right: 1.5px;}
+
+/*create*/
+.titel_create{
+    display: flex;
+    justify-content:right;
+    position: relative;
+    right: 2.5px;}
+.info_create>*{
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    gap: 5px;
+    margin-left: 15px;
+    margin-top:5px;
+    margin-bottom: 5px;}
+
+/*choose*/
+.choose{
+    display: flex;
+    justify-content:space-between;
+    margin-top:10px;
+    margin-bottom: 5px;}
+.info_choose{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;}
+.crud_choose{
+    position: relative;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50px;}
+.choose_delete{
+    height: 4vh;
+}
+.choose_update{
+    height: 4vh;}
+
+/*updade*/
+.info_update{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px}
+.submit_update{
+    position: relative;
+    right: 2.5px;}
+
+/*search*/
+.list_contacts_search{
+    border-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 20px;}
+.choose_contact_search{
+    border-style: none;
+    border-bottom: solid;
+    border-bottom-color: rgb(189, 187, 187);
+    margin-bottom: 5px;
+    background-color: white;
+    display: flex ;
+    width: 300px;
+    justify-content:space-between;
+    position: relative;
+    right: 1.5px;}
+.search_result :hover{
+    background-color: rgb(209, 195, 195);}
+.info_result{
+    border-style: none;
+    margin-bottom: 5px;
+    background-color: white;
+    display: flex ;
+    width: 300px;
+    justify-content:space-between;
+    position: relative;
+    right: 1.5px;}

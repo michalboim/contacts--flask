@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update contact</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="main">
+        <div >
+            <div class="go_home">
+                <form action="/go_home">
+                    <input type="image" src="/static/home.png" class="go_home" alt="HOME">
+                </form>
+            </div>
+            <form class="info_update">
+                <div><b>Name: </b><input type="text" name="name" value="{{contact.name}}"></div>
+                <div><b>Email: </b><input type="email" name="email" value="{{contact.email}}"></div>
+                <div><b>Phone: </b><input type="tel" name="phone" value="{{contact.phone}}"  pattern="[0-9]{3}-[0-9]{7}"></div>
+                <input type="hidden" name="tid_update" value="{{contact.tid}}">
+                <input class="submit_update" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

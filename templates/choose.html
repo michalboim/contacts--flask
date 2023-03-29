@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choose contact</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="go_home">
+            <form action="/go_home">
+                <input type="image" src="/static/home.png" class="go_home" alt="HOME">
+            </form>
+            </div>
+        <div class="choose">
+            <div class="info_choose">
+                    <div> <b>Name: </b>{{contact.name}}</div>
+                    <div> <b>Email: </b>{{contact.email}} </div>
+                    <div> <b>Phone: </b>{{contact.phone}} </div>
+                </div>       
+            <div class="crud_choose">
+                <form action="/delete" method="post">
+                    <input type="image" class="choose_delete" src="/static/trash.png" alt="Delete">
+                    <input type="hidden" name="tid_delete" value="{{contact.tid}}" >
+                </form>
+                <form action="/update" method="post">
+                    <input type="image" class="choose_update" src="/static/edit.png" alt="Update">
+                    <input type="hidden" name="tid_update" value="{{contact.tid}}" >
+                </form>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

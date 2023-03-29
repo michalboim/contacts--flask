@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create contact</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="titel_create">
+            <form action="/go_home">
+                <input type="image" src="/static/home.png" class="go_home" alt="HOME">
+            </form>
+        </div>
+            <div>Add new contact information: </div>
+        <div class="info_create">
+            <form  method="post">
+                <input type="text" name="name" placeholder="Enter Full Name">
+                <input type="email" name="email" title="example@example.com" placeholder="Enter Email">
+                <input type="tel" name="phone" placeholder="Enter Mobile munber" title="example: 050-1234567"  pattern="[0-9]{3}-[0-9]{7}">
+                <input type="submit" value="Submit">
+            </form>
+        </div>  
+    </div>
+</body>
+</html>
