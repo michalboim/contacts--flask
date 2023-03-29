@@ -25,4 +25,3 @@ def update_contact(table, column, new_value, tid:int):
 def search_name(table,name):
     return get_db(f"SELECT * FROM {table} WHERE name LIKE '{name}%'")
 
-#contacts_info.sort(key=lambda c:c.name)

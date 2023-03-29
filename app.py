@@ -80,7 +80,15 @@ def search():
             contacts_list.append(contact)
         return render_template('search.html', contacts_list=contacts_list)
 
-
+@app.route('/sort')
+def sort():
+    contacts_info=[]
+    info=read_all_contacts('contact')
+    for contact in info:
+            contact=Contact(contact[1], contact[2], contact[3], contact[0])
+            contacts_info.append(contact)
+    contacts_info.sort(key=lambda c:c.name)
+    return render_template('index.html', contacts_info=contacts_info)
 
 
 
